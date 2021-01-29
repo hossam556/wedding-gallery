@@ -1,10 +1,13 @@
 import './App.css';
-
+import Layout from './hoc/Layout';
+import WeddingIdeas from './container/WeddingIdeas';
 
 const App =()=> {
   return (
     <div className="App">
-        hello
+        <Layout>
+          <WeddingIdeas/>
+        </Layout>
     </div>
   );
 }
