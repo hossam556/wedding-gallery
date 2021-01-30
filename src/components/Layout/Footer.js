@@ -5,6 +5,7 @@ const StyledDiv = styled.div`
 display : flex ;
 justify-content : space-between ;
 left : 0 ;
+bottom : 0 ;
 width : 100% ;
 background-color : black ;
 color : white ;

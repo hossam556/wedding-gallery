@@ -1,0 +1,1 @@
+export {fetchIdeas ,openImage} from './wIdeas';

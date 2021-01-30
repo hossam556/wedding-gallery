@@ -1,12 +1,17 @@
 import './App.css';
+import {Route , Switch} from 'react-router-dom';
 import Layout from './hoc/Layout';
 import WeddingIdeas from './container/WeddingIdeas';
+import ImgDetails from './container/ImgDetails';
 
 const App =()=> {
   return (
     <div className="App">
         <Layout>
-          <WeddingIdeas/>
+          <Switch>
+            <Route path='/photo' component={ImgDetails}/>
+            <Route path='/'exact component={WeddingIdeas}/>
+          </Switch>
         </Layout>
     </div>
   );

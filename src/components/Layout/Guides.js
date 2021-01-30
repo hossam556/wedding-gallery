@@ -1,10 +1,10 @@
 import React , {useState} from 'react';
 import styled from 'styled-components';
-import * as data from '../guidData';
+import * as data from '../../guidData';
 import Guide from './Guide';
 
 const Container = styled.div`
-   width : 81% ;
+   width : 84% ;
    margin : auto;`
 
 const StyledDiv = styled.div`
@@ -12,7 +12,9 @@ const StyledDiv = styled.div`
    flex-wrap : wrap;`
    
 const H2 = styled.h2`
-   margin-bottom : 70px ;`   
+   margin-bottom : 70px ;
+   line-height: 1.25;
+   text-align: center;`   
 
 const Guides=()=> {
     const [guidesData , setGuides]= useState(data.guides) ;

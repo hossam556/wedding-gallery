@@ -20,6 +20,11 @@ const Div1 = styled.div`
     width : 220px ;
     margin-left : 20px ;`
 
+const Span = styled.span`
+    line-height: 1.6;
+    font-weight: 100;
+`
+
 const Guide=(props)=> {
     return (
         <Container>
@@ -28,7 +33,7 @@ const Guide=(props)=> {
             </div>
             <Div1>
                 <h2>{props.title}</h2>
-                <span>{props.text}</span><br/>
+                <Span>{props.text}</Span><br/>
                 <a href='https://weds360.com/en/build_your_website' >{props.link}</a>
             </Div1>
         </Container>

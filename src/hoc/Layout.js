@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-import Guides from '../components/Guides';
+import Nav from '../components/Layout/Nav';
+import Footer from '../components/Layout/Footer';
+import Guides from '../components/Layout/Guides';
 import styled from 'styled-components';
 
  const Container = styled.div`
@@ -10,7 +10,7 @@ import styled from 'styled-components';
                         'main'
                         'guide' 
                         'footer';
-    grid-template-rows: 140px 200vh 90vh 30px;
+    grid-template-rows: 140px 185vh 100vh 30px;
     height: 100%;`
 
  const Main = styled.main`
