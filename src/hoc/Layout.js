@@ -10,8 +10,10 @@ import styled from 'styled-components';
                         'main'
                         'guide' 
                         'footer';
-    grid-template-rows: 140px 185vh 100vh 30px;
-    height: 100%;`
+    //grid-template-rows: 140px 185vh 100vh 30px;
+    grid-template-rows: 120px auto auto 50px;
+
+    height: 100vh;`
 
  const Main = styled.main`
       grid-area: 'main';`

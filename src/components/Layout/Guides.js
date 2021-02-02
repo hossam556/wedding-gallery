@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React  from 'react';
 import styled from 'styled-components';
 import * as data from '../../guidData';
 import Guide from './Guide';
@@ -9,17 +9,18 @@ const Container = styled.div`
 
 const StyledDiv = styled.div`
    display : flex ;
-   flex-wrap : wrap;`
+   flex-wrap : wrap;
+   padding-left:30px;`
    
 const H2 = styled.h2`
-   margin-bottom : 70px ;
+   padding-bottom : 70px ;
+   padding-top:90px;
    line-height: 1.25;
    text-align: center;`   
 
 const Guides=()=> {
-    const [guidesData , setGuides]= useState(data.guides) ;
 
-    let allGuides = guidesData.map(item => {
+    let allGuides = data.guides.map(item => {
         return <Guide
                  key={item.title}
                  title={item.title}

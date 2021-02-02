@@ -164,7 +164,7 @@ const WeddingIdeas =(props)=> {
 
 const mapStateToprops = state =>{
     return{
-        ideas : state.ideas
+        ideas : state.WI.ideas
     }
 }
 

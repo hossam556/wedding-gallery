@@ -24,6 +24,9 @@ const Span = styled.span`
     line-height: 1.6;
     font-weight: 100;
 `
+const A = styled.a`
+text-decoration:none;
+color:#337ab7;`
 
 const Guide=(props)=> {
     return (
@@ -34,7 +37,7 @@ const Guide=(props)=> {
             <Div1>
                 <h2>{props.title}</h2>
                 <Span>{props.text}</Span><br/>
-                <a href='https://weds360.com/en/build_your_website' >{props.link}</a>
+                <A href='https://weds360.com/en/build_your_website' >{props.link}</A>
             </Div1>
         </Container>
     )

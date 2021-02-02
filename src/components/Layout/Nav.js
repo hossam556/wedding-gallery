@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const StyledDiv = styled.div`
    width : 82% ;
    display : flex;
@@ -184,7 +185,7 @@ const Nav=()=> {
                   </p>
                   <Ldiv >
                  <La href="/">WEDDING IDEAS</La>
-                 <La className='last' href="/">MORE</La>
+                 <La className='last' href="/categories">MORE</La>
                 </Ldiv> 
                  
               </Idiv> 

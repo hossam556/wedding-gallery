@@ -6,7 +6,8 @@ import styled from 'styled-components';
 const Container = styled.div`
 display : flex ;
 width : 84% ;
-margin : auto ;`
+margin : auto ;
+margin-bottom:80px;`
 
 const Div1 = styled.div`
 flex : 65% ;
@@ -25,7 +26,7 @@ padding-left:120px ;
 const Img = styled.img`
 width : 700px ;
 float: left;
-height: 840px;
+height: 550px;
 object-fit: cover;
 `
 
@@ -103,7 +104,7 @@ const ImgDetails=(props)=> {
 
 const mapStateToprops = state =>{
     return{
-        idea : state.idea
+        idea : state.WI.idea
     }
 }
 

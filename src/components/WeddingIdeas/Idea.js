@@ -4,7 +4,8 @@ import {NavLink} from 'react-router-dom';
 
 const Div = styled.div`
 margin-right : 10px;
-margin-bottom : 40px;`
+margin-bottom : 40px;
+cursor:pointer;`
 
 const H3 = styled.h3`
 color: black ;
