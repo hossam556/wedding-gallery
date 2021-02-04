@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import {connect} from 'react-redux';
 import Category1 from '../components/Categories/Category1';
 import Category2 from '../components/Categories/Category2';
-import Fade from 'react-reveal/Fade';
 import * as actions from '../store/actions/index';
 import Spinner from '../components/UI/Spinner';
+
 
 
 
@@ -19,17 +19,28 @@ display : flex;
 margin-top: 40px;
 `
 const Div2 = styled.div`
-max-width : 1080px;
-height: 150px;
+//max-width : 1080px;
+//height: 150px;
+transition-timing-function: linear ;
+transition: height 2s ease-in-out;
+
 margin : auto ;
 margin-left : 40px;
 margin-top:12px;
 background-color:black ;
 overflow: auto;
-//position:absolute;
   ::-webkit-scrollbar{
     display: none;
-};`
+};
+&.catg{
+  width :0px ;
+  height: 0px;
+};
+&.catg_display{
+  width : 1080px;
+  height: 150px;
+};
+`
 
 const Div3 = styled.div`
   //margin-top : 180px;
@@ -157,14 +168,16 @@ const Categories=(props)=> {
                 <Button onClick={handleClick}>FIND CATEGORIES HERE<Span><i style={{fontSize:'40px'}} class="material-icons">keyboard_arrow_down</i></Span></Button>
                 <Input placeholder='SEARCH'/>
             </Div1>
-            <Fade left when={show}>
-              {show && <Div2>
+            
+               <Div2 className={`catg ${show && 'catg_display'}`}>
                  
-                 <Ul>{categories1}</Ul>
-               </Div2>}
-             </Fade>
+                 <Ul>
+                   {categories1}
+                </Ul>
+               </Div2>
+             
 
-            <Div3 id='catg'>
+            <Div3>
                 <Ul2>{categories2}</Ul2>
             </Div3>
             <Pdiv>
@@ -192,5 +205,3 @@ const mapDispatchToProps = dispatch =>{
 }
 
 export default connect(mapStateToprops,mapDispatchToProps)(Categories);
-
-

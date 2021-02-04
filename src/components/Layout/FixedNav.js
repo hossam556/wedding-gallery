@@ -1,79 +1,31 @@
-import React ,{useEffect , useState }from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import FixedNav from './FixedNav';
-import useDimensions from "react-cool-dimensions";
 
-
-
-const StyledDiv = styled.div`
-   width : 82% ;
-   display : flex;
-   margin : auto ;
-   font-weight: 900;
-    overflow: hidden;
-   height : 160px;
-   font-family: lato,sans-serif;
-   font-size : 13px ;
-  @media(max-width : 1125px){
-    font-size : 10px ;
-    width : 90% ;
-  };
-    
-   `  
 const Div = styled.div`
-position: relative;
+position:fixed;
+background-color:white;
+width:100%;
+display:flex ;
+justify-content:space-between;
+align-items:center;
+font-weight: 900;
+font-size : 13px ;
+font-family: lato,sans-serif;
+padding : 10px;
+padding-left: 40px;
+@media(max-width : 1125px){
+    font-size : 10px ;
+  };
+  @media(max-width : 769px){
+    display : none ;
+  };
 `
 
-   
-const Div2 = styled.div`
-   display : flex ;
-   flex : 44% ;
-   justify-content : space-between;
-   align-items : center ;
-   border-top : .1rem solid black ;
-   border-bottom : .1rem solid black;
-   padding-right : 20px;
-   padding-left : 25px ;
-   align-self: center;
-   @media(max-width : 1125px){
-    padding : 5px ;
-    margin-left : 10px ;
-    padding-left : 10px ;
-  };`
-
-const Div3 = styled.div`
-    display : flex;
-    flex :12% ;
-    position: relative; 
-    
-    `
- const Img = styled.img`
-    width : 108px ;
-    max-width: 100% ;
+const Img = styled.img`
+    width : 55px ;
     object-fit : contain ;
-    position : absolute;
-    bottom : 55px ;
-    left : 7px ;
-    
+    max-width : 100% ;
  `
-const ItemsDiv = styled.div`
-  width : 100% ;
-  display : flex ;
-  color : #024d4c;
-  position: absolute;
-  align-items : center;
-  left : 145px ;
-  top : 30px ;
-  @media(max-width : 1125px){
-    left :90px ;
-  };
-` 
-const AR = styled.a`
-padding-left: 5px;
-padding-right: 5px;
-margin-left : 10px ;
-border-right: 1px solid #000;
-border-left: 1px solid #000;`
 
 const Ldiv = styled.div`
 position: absolute;
@@ -114,47 +66,28 @@ color : black;
 text-decoration: none;
 
 `
-const Header = styled.header`
-&.nav{
-  opacity:0 ;
-transition: all 0.7s;
-transition-timing-function: ease-in;
-};
+const ItemsDiv = styled.div`
+  display : flex ;
+  width : 35% ;
+  color : #024d4c;
+  align-items : center;
 
-&.nav_display{
-   opacity:1 ;
-};`
+` 
+const AR = styled.a`
+padding-left: 5px;
+padding-right: 5px;
+margin-left : 10px ;
+border-right: 1px solid #000;
+font-size: 15px;
+border-left: 1px solid #000;`
 
-const Nav=()=> {
-
-  const [show ,handleShow] = useState(false) ;
-
-  useEffect(()=>{
-      window.addEventListener('scroll',()=>{
-          if(window.scrollY > 100){
-              handleShow(true)
-          }else handleShow(false) 
-      });
-      //return ()=>{
-          //window.removeEventListener('scroll')
-      //}
-  },[])
-
-
-
-       
-     let fixednav = <FixedNav/>;
-
+const FixedNav=()=> {
     return (
-        <Div> 
-           <Header className={`nav ${show && 'nav_display'}`}>{fixednav}</Header>
-          <ItemsDiv>
-            <i class='fas fa-user-plus'></i>
-            <AR><strong>العربية</strong></AR>
-          </ItemsDiv>   
-        <StyledDiv >
-             <Div2> 
-             <Idiv>
+        <Div>
+            <div>
+             <Img src= 'https://weds360.com/assets/logo-230bd37b1825e38607ce1c61b6d90db4b882249ec903fba33728119249a9036f.png' alt='360Weds'/>
+            </div>
+            <Idiv>
                 <p>
                   <A href='/'>360 PLANNER</A>
                   </p>
@@ -166,8 +99,8 @@ const Nav=()=> {
                  <La href="/">WEDDING WEBSITE</La>
                  <La href="/">COUPLE WEBSITE</La>
                  <La className='last' href="/">MORE</La>
-                </Ldiv>               
-              </Idiv>
+                </Ldiv>    
+              </Idiv> 
 
               <Idiv>
                 <p>
@@ -179,8 +112,8 @@ const Nav=()=> {
                  <La href="/">RINGS</La>
                  <La href="/">MAKEUP ARTISTS</La>
                  <La className='last' href="/">MORE</La>
-                </Ldiv>                 
-              </Idiv>
+                </Ldiv>  
+              </Idiv> 
 
               <Idiv>
                 <p>
@@ -192,7 +125,7 @@ const Nav=()=> {
                  <La href="/"> MEN'S GROOMING </La>
                  <La href="/"> FITNESS </La>
                  <La className='last' href="/">MORE</La>
-                </Ldiv>          
+                </Ldiv> 
               </Idiv> 
 
               <Idiv>
@@ -206,22 +139,16 @@ const Nav=()=> {
                  <La href="/">PHOTOGRAPHERS</La>
                  <La href="/">DJS</La>
                  <La className='last' href="/">MORE</La>
-                </Ldiv>        
+                </Ldiv> 
               </Idiv> 
-            </Div2>
-            
-            <Div3>
-             <Img src= 'https://weds360.com/assets/logo-230bd37b1825e38607ce1c61b6d90db4b882249ec903fba33728119249a9036f.png' alt='360Weds'/>
-            </Div3>
 
-            <Div2>   
-             <Idiv>
+              <Idiv>
                 <p>
                   <A href='/'>VENDORS</A>
                   </p>
                   <Ldiv >
                  <La className='last' href="/">CREATE YOUR PROFILE</La>
-                </Ldiv>            
+                </Ldiv>                
               </Idiv> 
 
                <Idiv>
@@ -231,7 +158,7 @@ const Nav=()=> {
                   <Ldiv >
                  <La href="/">WEDDING IDEAS</La>
                  <La className='last' href="/categories">MORE</La>
-                </Ldiv>             
+                </Ldiv>                 
               </Idiv> 
 
               <Idiv>
@@ -242,13 +169,17 @@ const Nav=()=> {
                  <La href="/">TIPS & ETIQUETTE</La>
                  <La href="/">WEDDING OF THE WEEK</La>
                  <La className='last' href="/">MORE</La>
-                </Ldiv>      
+                </Ldiv>        
               </Idiv>   
-            </Div2>
 
-        </StyledDiv>
+              <ItemsDiv>
+                 <i class='fas fa-user-plus' style={{fontSize : '15px'}}></i>
+                <AR><strong>العربية</strong></AR>
+             </ItemsDiv>   
         </Div>
     )
 }
 
-export default Nav;
+export default FixedNav;
+
+
