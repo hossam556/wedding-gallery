@@ -13,7 +13,8 @@ import styled from 'styled-components';
     //grid-template-rows: 140px 185vh 100vh 30px;
     grid-template-rows: 120px auto auto 50px;
 
-    height: 100vh;`
+    height: 100vh;
+`
 
  const Main = styled.main`
       grid-area: 'main';`
@@ -25,11 +26,13 @@ const Foot2 = styled.footer`
     grid-area: 'guide';` 
 
 const Foot1 = styled.footer`
-    grid-area: 'footer';`     
+    grid-area: 'footer';`  
+
 
 const Layout=(props)=> {
     return (
         <Container>
+           
             <Header><Nav/></Header>
              <Main>{props.children}</Main>
              <Foot2><Guides/></Foot2>

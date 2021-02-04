@@ -3,22 +3,35 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
-  width : 350px ;
+  //width : 350px ;
+  width : 32% ;
   display : flex ;
   justify-content : center;
   align-items : center ;
   font-size : 12px;
   letter-spacing: .5px;
   margin-bottom : 50px;
-  margin-right : 8px;`
+  margin-right : 8px;
+  @media(max-width : 990px){
+    width : 48% ;
+  };
+  @media(max-width : 769px){
+    width : 98% ;
+    margin-bottom : 100px;
+  };
+  `
 
 const Img = styled.img`
   width : 60px ;
+  //max-width : 100% ;
   object-fit : contain ;`
   
 const Div1 = styled.div`
     width : 220px ;
-    margin-left : 20px ;`
+    margin-left : 20px ;
+    @media(max-width : 769px){
+    width : 100% ;
+  };`
 
 const Span = styled.span`
     line-height: 1.6;

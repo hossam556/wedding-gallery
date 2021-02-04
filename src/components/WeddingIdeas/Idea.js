@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 
 const Div = styled.div`
-margin-right : 10px;
+width : 100% ;
 margin-bottom : 40px;
 cursor:pointer;`
 
@@ -13,11 +13,18 @@ color: black ;
 
 
 const Img = styled.img`
+max-width: 100%;
 width : 260px ;
 float: left;
 height: 230px;
 object-fit: cover;
  margin-bottom : 10px;
+ @media(max-width : 990px){
+    width : 300px ;
+  };
+  @media(max-width : 769px){
+    width : 340px ;
+  };
 `
 
 const Idea=(props)=> {

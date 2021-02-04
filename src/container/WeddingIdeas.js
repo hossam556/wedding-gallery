@@ -9,26 +9,46 @@ import Spinner from '../components/UI/Spinner';
 const Div = styled.div`
 display : flex ;
 align-items: center ;
-padding-left:115px ;
+//padding-left:115px ;
+width : 82% ;
+margin : auto ;
+@media(max-width : 1125px){
+    width : 90% ;
+  };
 `
 
 const Container = styled.div`
 display : flex ;
-width : 84% ;
-margin : auto ;`
+width : 82% ;
+margin : auto ;
+@media(max-width : 1125px){
+    width : 90% ;
+  };
+@media(max-width : 769px){
+     flex-direction : column ;
+  };`
 
 const Div1 = styled.div`
 flex : 22% ;
 padding-top : 40px;
-padding-left : 15px;`
+padding-left : 5px ;
+@media(max-width : 769px){
+    flex : 100% ;
+  };
+`
 
 const Div2 = styled.div`
 flex : 78% ;
+@media(max-width : 769px){
+    flex : 100% ;
+  };
 `
 const Ul = styled.ul`
+width : 100% ;
 display : flex ;
 flex-wrap : wrap ;
-list-style-type : none;`
+list-style-type : none;
+`
 
 
 const Bdiv = styled.div`
@@ -96,6 +116,16 @@ color: black;
     cursor : not-allowed ;
   }
 `
+const Li = styled.li`
+width : 31.5% ;
+@media(max-width : 1125px){
+    padding-left : 10px ;
+  };
+@media(max-width : 990px){
+    width : 45% ;
+  };
+  
+`
 
 
 
@@ -111,12 +141,12 @@ const WeddingIdeas =(props)=> {
 
     if(props.ideas){
         allIdeas =  props.ideas.map(idea=>{
-            return <li key={idea._id}>
+            return <Li key={idea._id}>
                 <Idea
                    image={idea.image}
                    title={idea.title}
                    openImage={()=>props.onOpenImage(idea)}/>
-            </li>
+            </Li>
         });
     }
   

@@ -5,7 +5,10 @@ import Guide from './Guide';
 
 const Container = styled.div`
    width : 84% ;
-   margin : auto;`
+   margin : auto;
+   @media(max-width : 1125px){
+    width : 95% ;
+  };`
 
 const StyledDiv = styled.div`
    display : flex ;
@@ -16,7 +19,10 @@ const H2 = styled.h2`
    padding-bottom : 70px ;
    padding-top:90px;
    line-height: 1.25;
-   text-align: center;`   
+   text-align: center;
+   @media(max-width : 769px){
+    font-size : 19px ; 
+  };`   
 
 const Guides=()=> {
 

@@ -1,5 +1,7 @@
-import React from 'react';
+import React ,{useState ,useEffect}from 'react';
 import styled from 'styled-components';
+import Chat from './Chat';
+import Chat2 from './Chat2';
 
 const StyledDiv = styled.div`
 display : flex ;
@@ -46,11 +48,58 @@ const A = styled.a`
     text-decoration: none;
     padding-right:7px;
 `
-
+const Foot = styled.footer`
+position : fixed ;
+ `
+const Span = styled.span`
+position : fixed ;
+bottom:90px;
+padding : 12px ;
+right: 33px;
+color : #337ab7 ;
+background-color: #fff;
+box-shadow: 0 0 2px 0;
+display : block;
+cursor : pointer ;
+border-radius: 50%;
+opacity:0 ;
+transition: all 0.7s;
+transition-timing-function: ease-in;
+&.icon_display{
+   opacity:1 ;
+};
+`
 
 const Footer=()=> {
+    const [show ,handleShow] = useState(false) ;
+
+    useEffect(()=>{
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY > 100){
+                handleShow(true)
+            }else handleShow(false) 
+        });
+        //return ()=>{
+            //window.removeEventListener('scroll')
+        //}
+    },[])
+
+    const scrollUp =()=>{
+        let y = -10 
+        setInterval(function() {
+            window.scrollBy(0,y)
+            if(window.scrollY === 0){
+                y=0
+            }
+        }, 1);
+    }
+
     return (
         <StyledDiv>
+            
+            <Foot><Chat/></Foot>
+            <Span onClick={scrollUp} className={` ${show && 'icon_display'}`}><i class="material-icons" style={{fontSize:"26px"}}>keyboard_arrow_up</i></Span>
+            
             <Div1>
               <h2>Weds360</h2>
               <div>
