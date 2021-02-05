@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Div = styled.div`
 position:fixed;
-background-color:white;
+background-color: #fff;
 width:100%;
 display:flex ;
 justify-content:space-between;

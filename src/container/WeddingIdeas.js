@@ -1,131 +1,12 @@
 import React,{useEffect} from 'react';
-import Aux from '../hoc/Auxilary';
-import styled from 'styled-components';
 import Idea from '../components/WeddingIdeas/Idea';
 import {connect} from 'react-redux';
 import * as actions from '../store/actions/index';
 import Spinner from '../components/UI/Spinner';
-
-const Div = styled.div`
-display : flex ;
-align-items: center ;
-//padding-left:115px ;
-width : 82% ;
-margin : auto ;
-@media(max-width : 1125px){
-    width : 90% ;
-  };
-`
-
-const Container = styled.div`
-display : flex ;
-width : 82% ;
-margin : auto ;
-@media(max-width : 1125px){
-    width : 90% ;
-  };
-@media(max-width : 769px){
-     flex-direction : column ;
-  };`
-
-const Div1 = styled.div`
-flex : 22% ;
-padding-top : 40px;
-padding-left : 5px ;
-@media(max-width : 769px){
-    flex : 100% ;
-  };
-`
-
-const Div2 = styled.div`
-flex : 78% ;
-@media(max-width : 769px){
-    flex : 100% ;
-  };
-`
-const Ul = styled.ul`
-width : 100% ;
-display : flex ;
-flex-wrap : wrap ;
-list-style-type : none;
-`
+import {Divv ,Div ,Container ,Div1,Div2,Ul,Bdiv ,
+          Button1,Button2,Input ,A,Span,Pdiv ,Ap ,Li} from './Wstyle';
 
 
-const Bdiv = styled.div`
-padding-bottom : 30px;
-`
-
-const Input = styled.input`
-width : 100% ;
-padding : 5px ;
-border: 0.1rem  solid black ;
-`
-
-const Button1 = styled.button`
-padding : 1px 10px ;
-margin-right : 4px ;
-background-color : white ;
-color : black ;
-border : solid 1px black ;
-`
-
-const Button2 = styled.button`
-padding : 1px 10px ;
-background-color : black ;
-color : white ;
-border : solid 1px black ;
-
-`
-
-const A = styled.a`
-text-decoration : none ;
-color :#008174;
-padding-right : 7px;
-transition: all ease 0.2s;
-:hover{
- color : black;
-};`
-
-const Span = styled.span`
-font-size :30px ;
-color: #333;
-padding-right : 7px;`
-
-const Pdiv = styled.div`
-display : flex;
-justify-content :center ;
-margin : auto;
-margin-top : 30px;
-`
-
-const Ap = styled.a`
-color: black;
-  float: left;
-  padding: 7px 12px;
-  text-decoration: none;
-  transition: background-color .3s;
-  color :#024d4c;
-  border: 1px solid #ddd;
-  :hover:not(.disabled , .active) {background-color: #ddd;};
-  &.active {
-  background-color:#024d4c ;
-  color: white;
-  cursor :context-menu;
-};
-&.disabled{
-    cursor : not-allowed ;
-  }
-`
-const Li = styled.li`
-width : 31.5% ;
-@media(max-width : 1125px){
-    padding-left : 10px ;
-  };
-@media(max-width : 990px){
-    width : 45% ;
-  };
-  
-`
 
 
 
@@ -152,7 +33,7 @@ const WeddingIdeas =(props)=> {
   
 
     return (
-        <Aux>
+        <Divv>
         <Div>
             <h3><A href='/'>GALLERY</A></h3>
             <Span><i class="fa fa-angle-right " aria-hidden="true"></i></Span>
@@ -188,7 +69,7 @@ const WeddingIdeas =(props)=> {
            <Ap href="/">44</Ap>
            <Ap href="/">Next→</Ap>
         </Pdiv>
-        </Aux>
+        </Divv>
     )
 }
 

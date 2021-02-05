@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   //width : 350px ;
+  opacity : 0.95 ;
   width : 32% ;
   display : flex ;
   justify-content : center;
@@ -19,16 +20,23 @@ const Container = styled.div`
     width : 98% ;
     margin-bottom : 100px;
   };
+  @media(max-width : 575px){
+    font-size : 16px;
+  };
   `
 
 const Img = styled.img`
   width : 60px ;
   //max-width : 100% ;
-  object-fit : contain ;`
+  object-fit : contain ;
+  @media(max-width : 575px){
+    width :75px;
+  };`
   
 const Div1 = styled.div`
     width : 220px ;
     margin-left : 20px ;
+    opacity:0.95 ;
     @media(max-width : 769px){
     width : 100% ;
   };`

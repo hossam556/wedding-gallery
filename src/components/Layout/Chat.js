@@ -3,6 +3,8 @@ import {Launcher} from 'react-chat-window';
 import styled from 'styled-components';
 import './Chat.css';
 
+const Div = styled.div`
+background-color:red;`
  
 class Demo extends Component {
  
@@ -32,7 +34,9 @@ class Demo extends Component {
   }
  
   render() {
-    return (<div>
+
+    
+    return (<Div>
       <Launcher 
         agentProfile={{
           teamName: 'Weds360',
@@ -42,7 +46,7 @@ class Demo extends Component {
         messageList={this.state.messageList}
         showEmoji
       />
-    </div>)
+    </Div>)
   }
 }
 

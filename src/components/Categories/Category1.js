@@ -8,6 +8,7 @@ padding-right:50px;
 const Img = styled.img`
 background-color : black;
 width : 32px;
+max-width : 100% ;
 object-fit: contain ;`
 
 const  P = styled.p`

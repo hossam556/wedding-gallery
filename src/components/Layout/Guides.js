@@ -22,6 +22,10 @@ const H2 = styled.h2`
    text-align: center;
    @media(max-width : 769px){
     font-size : 19px ; 
+  };
+  @media(max-width : 575px){
+    font-size : 25px ; 
+
   };`   
 
 const Guides=()=> {

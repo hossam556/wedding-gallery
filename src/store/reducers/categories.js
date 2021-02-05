@@ -3,7 +3,7 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState ={
     categories :null ,
     error : null ,
-
+    open : false ,
 }
 
 const reducer= (state = initialState , action)=>{
@@ -18,6 +18,11 @@ const reducer= (state = initialState , action)=>{
                 ...state ,
                 error : action.error ,
             };
+        case actionTypes.OPEN_DRAWER :
+            return{
+                ...state ,
+                open : !state.open
+            }    
         default : return state ;    
     }
 }

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Modal = styled.div`
 position: absolute;
 background-color:white;
+max-width : 100% ;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
@@ -15,6 +16,7 @@ height: 130px;
 display:none;
 `
 const Div = styled.div`
+width : 100% ;
 position: relative;
 text-align:center;
 cursor:pointer ;
@@ -24,29 +26,45 @@ cursor:pointer ;
 `
 
 const Img = styled.img`
-max-width : 350px ;
+width : 350px ;
+max-width : 100% ;
 float: left;
 height: 240px;
 object-fit: cover;
  margin-bottom : 10px;
  margin-right : 14px;
  filter: brightness(60%);
- 
+ @media(max-width : 990px){
+    width : 400px ;
+  };
+  @media(max-width : 550px){
+    width :  700px ;
+  };
+  
 `
 const Icon = styled.img`
 width : 50px;
+max-width :100% ;
 object-fit: contain ;
 color : white;
 background-color:none;
 position:absolute;
 right: 160px;
 top:65px;
+@media(max-width : 575px){
+    right: 180px;
+  };
+  @media(max-width : 365px){
+    right: 130px;
+  };
+  @media(max-width : 325px){
+    right: 110px;
+  };
 `
 
 const A = styled.a`
 text-decoration: none ;
 color : white;
-
 
 `
 const P = styled.p`

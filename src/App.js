@@ -5,6 +5,10 @@ import WeddingIdeas from './container/WeddingIdeas';
 import ImgDetails from './container/ImgDetails';
 import Categories from './container/Categories';
 
+
+
+
+
 const App =()=> {
   return (
     <div className="App">

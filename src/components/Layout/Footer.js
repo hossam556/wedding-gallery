@@ -1,7 +1,6 @@
 import React ,{useState ,useEffect}from 'react';
 import styled from 'styled-components';
 import Chat from './Chat';
-import Chat2 from './Chat2';
 
 const StyledDiv = styled.div`
 display : flex ;
@@ -13,6 +12,12 @@ color : white ;
 font-family: lato,sans-serif;
 font-size: 14px;
 align-items:center;
+@media(max-width : 575px){
+    flex-direction : column ;
+    align-content : center ;
+    justify-content : center ;
+    text-align : center ;
+  };
 ` 
 const Div1=styled.div`
 padding-left : 15px;
@@ -23,17 +28,28 @@ padding-bottom:10px;
 const Div2 = styled.div`
 padding-top :40px;
 font-size:10px;
-padding-left:140px;`
+padding-left:140px;
+@media(max-width : 575px){
+    padding : 0;
+    margin-left : 25px ;
+    text-align : center ;
+  };`
 
 const Ul =styled.ul`
 list-style-type:none;
 font-size:10px;
 display:flex;
 flex-direction:column;
-
 padding-right:100px;
 padding-top:20px;
-align-items:flex-end;`
+align-items:flex-end;
+@media(max-width : 575px){
+    padding : 0;
+    margin-left : 25px ;
+    text-align : center ;
+    align-items : center ;
+    font-size : 5px;
+  };`
 
 const Li =styled.li`
 padding-bottom:5px;`
@@ -50,6 +66,7 @@ const A = styled.a`
 `
 const Foot = styled.footer`
 position : fixed ;
+
  `
 const Span = styled.span`
 position : fixed ;
@@ -68,6 +85,9 @@ transition-timing-function: ease-in;
 &.icon_display{
    opacity:1 ;
 };
+@media(max-width : 575px){
+    padding : 20px ;
+  };
 `
 
 const Footer=()=> {
@@ -79,9 +99,7 @@ const Footer=()=> {
                 handleShow(true)
             }else handleShow(false) 
         });
-        //return ()=>{
-            //window.removeEventListener('scroll')
-        //}
+        
     },[])
 
     const scrollUp =()=>{
@@ -93,13 +111,14 @@ const Footer=()=> {
             }
         }, 1);
     }
+    
 
     return (
         <StyledDiv>
-            
             <Foot><Chat/></Foot>
             <Span onClick={scrollUp} className={` ${show && 'icon_display'}`}><i class="material-icons" style={{fontSize:"26px"}}>keyboard_arrow_up</i></Span>
-            
+    
+           
             <Div1>
               <h2>Weds360</h2>
               <div>

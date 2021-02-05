@@ -9,6 +9,9 @@ cursor:pointer;`
 
 const H3 = styled.h3`
 color: black ;
+@media(max-width : 575px){
+    font-size : 26px;
+  };
 `
 
 
@@ -23,7 +26,10 @@ object-fit: cover;
     width : 300px ;
   };
   @media(max-width : 769px){
-    width : 340px ;
+    width : 330px ;
+  };
+  @media(max-width : 575px){
+    height:170px ;
   };
 `
 

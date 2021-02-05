@@ -1,14 +1,21 @@
 import React ,{useEffect , useState }from 'react';
 import styled from 'styled-components';
 import FixedNav from './FixedNav';
-import useDimensions from "react-cool-dimensions";
+import Aux from '../../hoc/Auxilary';
 
 
+const Div = styled.div`
+position: relative;
+width : 84% ;
+margin : auto;
+@media(max-width : 1125px){
+    width : 90% ;
+  };
+`
 
 const StyledDiv = styled.div`
-   width : 82% ;
+   width : 100% ;
    display : flex;
-   margin : auto ;
    font-weight: 900;
     overflow: hidden;
    height : 160px;
@@ -16,13 +23,9 @@ const StyledDiv = styled.div`
    font-size : 13px ;
   @media(max-width : 1125px){
     font-size : 10px ;
-    width : 90% ;
   };
     
    `  
-const Div = styled.div`
-position: relative;
-`
 
    
 const Div2 = styled.div`
@@ -62,11 +65,9 @@ const ItemsDiv = styled.div`
   color : #024d4c;
   position: absolute;
   align-items : center;
-  left : 145px ;
+  left : 20px ;
   top : 30px ;
-  @media(max-width : 1125px){
-    left :90px ;
-  };
+  
 ` 
 const AR = styled.a`
 padding-left: 5px;
@@ -146,8 +147,10 @@ const Nav=()=> {
      let fixednav = <FixedNav/>;
 
     return (
+      <Aux>
+         <Header className={`nav ${show && 'nav_display'}`}>{fixednav}</Header>
+
         <Div> 
-           <Header className={`nav ${show && 'nav_display'}`}>{fixednav}</Header>
           <ItemsDiv>
             <i class='fas fa-user-plus'></i>
             <AR><strong>العربية</strong></AR>
@@ -159,10 +162,10 @@ const Nav=()=> {
                   <A href='/'>360 PLANNER</A>
                   </p>
                   <Ldiv >
-                 <La href="/">CHECK LIST</La>
-                 <La href="/">BUDGETER</La>
-                 <La href="/">REGISTRY LIST</La>
-                 <La href="/">GUEST LIST</La>
+                 <La href="/categories">CHECK LIST</La>
+                 <La href="/categories">BUDGETER</La>
+                 <La href="/categories">REGISTRY LIST</La>
+                 <La href="/categories">GUEST LIST</La>
                  <La href="/">WEDDING WEBSITE</La>
                  <La href="/">COUPLE WEBSITE</La>
                  <La className='last' href="/">MORE</La>
@@ -174,11 +177,11 @@ const Nav=()=> {
                   <A href='/'>HER</A>
                   </p>
                   <Ldiv >
-                 <La href="/">DESIGNERS</La>
-                 <La href="/">BRIDAL BOUTIQUE</La>
-                 <La href="/">RINGS</La>
-                 <La href="/">MAKEUP ARTISTS</La>
-                 <La className='last' href="/">MORE</La>
+                 <La href="/categories">DESIGNERS</La>
+                 <La href="/categories">BRIDAL BOUTIQUE</La>
+                 <La href="/categories">RINGS</La>
+                 <La href="/categories">MAKEUP ARTISTS</La>
+                 <La className='last' href="/categories">MORE</La>
                 </Ldiv>                 
               </Idiv>
 
@@ -187,11 +190,11 @@ const Nav=()=> {
                   <A href='/'>HIM</A>
                   </p>
                   <Ldiv >
-                 <La href="/">SUITS</La>
-                 <La href="/"> HEALTH </La>
-                 <La href="/"> MEN'S GROOMING </La>
-                 <La href="/"> FITNESS </La>
-                 <La className='last' href="/">MORE</La>
+                 <La href="/categories">SUITS</La>
+                 <La href="/categories"> HEALTH </La>
+                 <La href="/categories"> MEN'S GROOMING </La>
+                 <La href="/categories"> FITNESS </La>
+                 <La className='last' href="/categories">MORE</La>
                 </Ldiv>          
               </Idiv> 
 
@@ -200,12 +203,12 @@ const Nav=()=> {
                   <A href='/'>THE WEDDING</A>
                   </p>
                   <Ldiv className='wedding'>
-                 <La href="/">VENUES</La>
-                 <La href="/">OUTDOOR WEEDING VENUES</La>
+                 <La href="/categories">VENUES</La>
+                 <La href="/categories">OUTDOOR WEEDING VENUES</La>
                  <La href="/">VIDEOGRAPHERS</La>
                  <La href="/">PHOTOGRAPHERS</La>
                  <La href="/">DJS</La>
-                 <La className='last' href="/">MORE</La>
+                 <La className='last' href="/categories">MORE</La>
                 </Ldiv>        
               </Idiv> 
             </Div2>
@@ -220,7 +223,7 @@ const Nav=()=> {
                   <A href='/'>VENDORS</A>
                   </p>
                   <Ldiv >
-                 <La className='last' href="/">CREATE YOUR PROFILE</La>
+                 <La className='last' href="/categories">CREATE YOUR PROFILE</La>
                 </Ldiv>            
               </Idiv> 
 
@@ -239,15 +242,16 @@ const Nav=()=> {
                   <A href='/'>IDEAS & MORE</A>
                   </p>
                   <Ldiv >
-                 <La href="/">TIPS & ETIQUETTE</La>
+                 <La href="/categories">TIPS & ETIQUETTE</La>
                  <La href="/">WEDDING OF THE WEEK</La>
-                 <La className='last' href="/">MORE</La>
+                 <La className='last' href="/categories">MORE</La>
                 </Ldiv>      
               </Idiv>   
             </Div2>
 
         </StyledDiv>
         </Div>
+      </Aux>  
     )
 }
 

@@ -26,3 +26,9 @@ export const fetchCategories =()=>{
  
      }
  }
+
+export const openDrawer = ()=>{
+    return{
+    type : actionTypes.OPEN_DRAWER
+    }
+};
