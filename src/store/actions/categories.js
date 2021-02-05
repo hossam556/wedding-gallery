@@ -18,7 +18,7 @@ export const fetchCategoriesFail = (error)=> {
 export const fetchCategories =()=>{
     return dispatch=>{
           
-     axios.get('https://wedding--gallery-default-rtdb.firebaseio.com/categories.json').then(response=>{
+     axios.get('https://wedding---cart-default-rtdb.firebaseio.com/categories.json').then(response=>{
              dispatch(fetchCategoriesSuccess(response.data))
      }).catch(error =>{
          dispatch(fetchCategoriesFail(error))

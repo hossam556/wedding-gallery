@@ -48,10 +48,19 @@ overflow: auto;
   max-width : 100% ;
   height: 150px;
    @media(max-width : 550px){
-    width : 700px;
+    width : 500px;
 
   };
-  
+  @media(max-width : 360px){
+    width : 320px;
+
+  };
+  @media(max-width : 330px){
+    width : 280px;
+
+  };
+
+
 };
 `
 
@@ -94,7 +103,7 @@ cursor:pointer;
   };
   @media(max-width : 990px){
   padding : 0px 50px ;
-   
+
   };
   @media(max-width : 550px){
     padding : 4px 7px; ;
@@ -105,7 +114,14 @@ cursor:pointer;
     margin-right : 10px ;
 
   };
-  
+  @media(max-width : 365px){
+    width:48%;
+  };
+  @media(max-width : 365px){
+    width:45%;
+    font-size:7px;
+
+  };
 `
 
 const Input = styled.input`
@@ -136,7 +152,9 @@ letter-spacing:3px;
     letter-spacing:1px;
 
   };
-  
+  @media(max-width : 365px){
+    width : 48% ;
+  };
 `
 const Pdiv = styled.div`
 display : flex;
@@ -170,7 +188,6 @@ const Li = styled.li`
 width : 33% ;
 @media(max-width : 990px){
     width : 48% ;
-    padding-right : 10px;
   };
   @media(max-width : 550px){
     width : 98% ;
