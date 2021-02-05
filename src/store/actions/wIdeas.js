@@ -20,7 +20,7 @@ export const fetchIdeasFail = (error)=> {
 export const fetchIdeas =()=>{
    return dispatch=>{
          
-    axios.get('https://wedding-gallery-f0bcb-default-rtdb.firebaseio.com/ideas.json').then(response=>{
+    axios.get('https://wedding--gallery-default-rtdb.firebaseio.com/ideas.json').then(response=>{
             dispatch(fetchIdeasSuccess(response.data))
     }).catch(error =>{
         dispatch(fetchIdeasFail(error))
