@@ -36,7 +36,7 @@ color : white;`
 const DrawerItem=(props) =>{
     return (
         <Div>
-            <A href='/'>
+            <A href='/categories'>
                 <Img src={props.icon} alt={props.title}/>
                 <P>{props.title}</P>
             </A>
