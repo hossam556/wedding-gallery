@@ -52,14 +52,9 @@ position:absolute;
 right: 160px;
 top:65px;
 @media(max-width : 575px){
-    right: 180px;
+    right: 330px;
   };
-  @media(max-width : 365px){
-    right: 130px;
-  };
-  @media(max-width : 325px){
-    right: 110px;
-  };
+ 
 `
 
 const A = styled.a`
