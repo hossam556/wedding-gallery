@@ -79,6 +79,7 @@ width : 1005 ;
 const Ul2 = styled.ul`
 display : flex ;
 flex-wrap : wrap ;
+justify-content : space-between ;
 list-style-type : none;`
 
 const Button = styled.button`
